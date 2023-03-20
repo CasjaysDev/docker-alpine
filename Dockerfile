@@ -6,7 +6,7 @@ ARG TIMEZONE="America/New_York"
 
 ARG IMAGE_REPO="alpine"
 ARG IMAGE_VERSION="latest"
-ARG CONTAINER_VERSION="latest 3.17"
+ARG CONTAINER_VERSION="latest"
 
 ARG USER="root"
 ARG DISTRO_VERSION="${IMAGE_VERSION}"
@@ -39,7 +39,7 @@ RUN set -ex ; \
   echo ""
 
 RUN set -ex ; \
-  echo ${PACK_LIST}
+  apk -U update && apk add --no-cache ${PACK_LIST}
 
 RUN set -ex ; \
   echo "$TIMEZONE" >"/etc/timezone" ; \

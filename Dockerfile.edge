@@ -39,7 +39,7 @@ RUN set -ex ; \
   echo ""
 
 RUN set -ex ; \
-  echo ${PACK_LIST}
+  apk -U update && apk add --no-cache ${PACK_LIST}
 
 RUN set -ex ; \
   echo "$TIMEZONE" >"/etc/timezone" ; \
