@@ -1,14 +1,13 @@
 ## 👋 Welcome to alpine 🚀  
 
-alpine README  
-my custom alpinelinux image with bash and tini installed 
+Small. Simple. Secure. Alpine Linux is a security-oriented, lightweight Linux distribution based on musl libc and busybox.  
+This image is built with bash, tini, and certbot installed  
   
 ## Run container
 
 ```shell
-docker run casjaysdev/alpine bash
+docker run --name -casjaysdev-alpine casjaysdev/alpine bash
 ```
-  
   
 ## Install my system scripts  
 
@@ -16,28 +15,27 @@ docker run casjaysdev/alpine bash
  sudo bash -c "$(curl -q -LSsf "https://github.com/systemmgr/installer/raw/main/install.sh")"
  sudo systemmgr --config && sudo systemmgr install scripts  
 ```
-
+  
 ## Get source files  
 
 ```shell
-dockermgr download src alpine
+dockermgr download src casjaysdev/docker-alpine
 ```
 
 OR
 
 ```shell
-git clone "https://github.com/casjaysdevdocker/alpine" "$HOME/Projects/github/casjaysdevdocker/alpine"
+git clone "https://github.com/casjaysdev/alpine" "$HOME/Projects/github/casjaysdev/alpine"
 ```
 
 ## Build container  
 
 ```shell
-cd "$HOME/Projects/github/casjaysdevdocker/alpine"
+cd "$HOME/Projects/github/casjaysdev/alpine"
 buildx 
 ```
 
 ## Authors  
 
-📽 dockermgr: [Github](https://github.com/dockermgr) [Docker](https://hub.docker.com/r/casjaysdevdocker) 📽  
-🤖 casjay: [Github](https://github.com/casjay) [Docker](https://hub.docker.com/r/casjay) 🤖  
-⛵ CasjaysDevDocker: [Github](https://github.com/casjaysdevdocker) [Docker](https://hub.docker.com/r/casjaysdevdocker) ⛵  
+🤖 casjay: [Github](https://github.com/casjay) 🤖  
+⛵ casjaysdev: [Github](https://github.com/casjaysdev) [Docker](https://hub.docker.com/r/casjaysdev) ⛵  
