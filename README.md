@@ -1,7 +1,7 @@
 ## 👋 Welcome to alpine 🚀  
 
-Small. Simple. Secure. Alpine Linux is a security-oriented, lightweight Linux distribution based on musl libc and busybox.  
-This image is built with bash, tini, and certbot installed  
+custom alpinelinux image with bash, tini, and certbot installed  
+  
   
 ## Run container
 
@@ -9,13 +9,14 @@ This image is built with bash, tini, and certbot installed
 docker run --name -casjaysdev-alpine casjaysdev/alpine bash
 ```
   
+  
 ## Install my system scripts  
 
 ```shell
  sudo bash -c "$(curl -q -LSsf "https://github.com/systemmgr/installer/raw/main/install.sh")"
  sudo systemmgr --config && sudo systemmgr install scripts  
 ```
-  
+
 ## Get source files  
 
 ```shell
@@ -25,13 +26,13 @@ dockermgr download src casjaysdev/docker-alpine
 OR
 
 ```shell
-git clone "https://github.com/casjaysdev/alpine" "$HOME/Projects/github/casjaysdev/alpine"
+git clone "https://github.com/casjaysdev/docker-alpine" "$HOME/Projects/github/casjaysdev/docker-alpine"
 ```
 
 ## Build container  
 
 ```shell
-cd "$HOME/Projects/github/casjaysdev/alpine"
+cd "$HOME/Projects/github/casjaysdev/docker-alpine"
 buildx 
 ```
 
